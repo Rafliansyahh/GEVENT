@@ -27,7 +27,7 @@ public interface APIService {
 
     @FormUrlEncoded
     @POST("Gevent")
-    Call<ValueNoData> addUnggah(@Field("namaevent") String namaBarang,
+    Call<ValueNoData> addUnggah(@Field("namaevent") String namaevent,
                                  @Field("alamat") String alamat,
                                  @Field("deskripsi") String deskripsi,
                                  @Field("user_id") String user_id);
@@ -35,7 +35,7 @@ public interface APIService {
     @FormUrlEncoded
     @PUT("Gevent")
     Call<ValueNoData> updateUnggah(@Field("id") String id,
-                                    @Field("namaBarang") String namaBarang,
+                                    @Field("namaevent") String namaevent,
                                     @Field("alamat") String alamat,
                                     @Field("deskripsi") String deskripsi);
 

@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                             intent.putExtra("EXTRA_DATA",unggah);
                             startActivity(intent);
                             return true;
-                        } else  if (idMenu==R.id.action_delete){
+                        } else  if (idMenu == R.id.action_delete){
                             String id = unggah.getId();
                             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                             builder.setTitle("Konfirmasi");
@@ -85,6 +85,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 popupMenu.show();
+            }
+        });
+
+        binding.fabInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddUnggahActivity.class);
+                startActivity(intent);
+
             }
         });
 }

@@ -61,10 +61,11 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ValueData<User>> call, Response<ValueData<User>> response) {
                 binding.progressBar.setVisibility(View.GONE);
-                if (response.code() == 200) {
+                if (response.code()==200) {
                     int success = response.body().getSuccess();
                     String message = response.body().getMessage();
-                    if (success == 1) {
+
+                    if (success==1) {
                         User user = response.body().getData();
                         Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
                         Utilities.setValue(LoginActivity.this, "xUserId", user.getId());

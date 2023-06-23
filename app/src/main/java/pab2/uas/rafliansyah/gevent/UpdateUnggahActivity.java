@@ -21,7 +21,7 @@ public class UpdateUnggahActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         binding = ActivityUpdateUnggahBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_update_unggah);
+        setContentView(binding.getRoot());
 
         unggah = getIntent().getParcelableExtra("EXTRA_DATA");
         String id = unggah.getId();
@@ -44,11 +44,11 @@ public class UpdateUnggahActivity extends AppCompatActivity {
                 }
                 if (TextUtils.isEmpty(alamat)){
                     bolehUpdate =false;
-                    binding.etNamaevent.setError("Alamat Tidak Boleh Kosong");
+                    binding.etAlamat.setError("Alamat Tidak Boleh Kosong");
                 }
                 if (TextUtils.isEmpty(deskripsi)){
                     bolehUpdate =false;
-                    binding.etNamaevent.setError("Deskripsi Tidak Boleh Kosong");
+                    binding.etDeskripsi.setError("Deskripsi Tidak Boleh Kosong");
                 }
                 if (bolehUpdate){
                     updateUnggah(id,namaevent,alamat,deskripsi);

@@ -30,7 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = binding.etUsername.getText().toString();
                 String password = binding.etPassword.getText().toString();
-                String konfirmasiPassword = binding.etKonfirmasiPassword.toString();
+                String konfirmasiPassword = binding.etKonfirmasiPassword.getText().toString();
 
                 boolean bolehRegister = true;
                 if (TextUtils.isEmpty(username)){
@@ -58,8 +58,15 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
-
     private void register(String username, String password){
         binding.progressBar.setVisibility(View.VISIBLE);
         APIService api = Utilities.getRetrofit().create(APIService.class);
@@ -80,8 +87,10 @@ public class RegisterActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }else {
-                    Toast.makeText(RegisterActivity.this, "Response", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
                     }
+                }else {
+                    Toast.makeText(RegisterActivity.this, "Response", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -92,5 +101,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(RegisterActivity.this, "Retrofit Error", Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 }

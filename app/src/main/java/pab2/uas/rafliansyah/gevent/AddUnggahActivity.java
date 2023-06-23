@@ -32,25 +32,25 @@ public class AddUnggahActivity extends AppCompatActivity {
                 boolean bolehUnggah = true;
                 if (TextUtils.isEmpty(namaevent)){
                     bolehUnggah =false;
-                    binding.etNamaevent.setError("Nama Barang Tidak Boleh Kosong");
+                    binding.etNamaevent.setError("Nama Event Tidak Boleh Kosong");
                 }
                 if (TextUtils.isEmpty(alamat)){
                     bolehUnggah =false;
-                    binding.etNamaevent.setError("Alamat Tidak Boleh Kosong");
+                    binding.etAlamat.setError("Alamat Tidak Boleh Kosong");
                 }
                 if (TextUtils.isEmpty(deskripsi)){
                     bolehUnggah =false;
-                    binding.etNamaevent.setError("Deskripsi Tidak Boleh Kosong");
+                    binding.etDeskripsi.setError("Deskripsi Tidak Boleh Kosong");
                 }
                 if (bolehUnggah){
                     String userId = Utilities.getValue(AddUnggahActivity.this,"xUserId");
-                    addUnggah(userId,namaevent,alamat,deskripsi);
+                    addUnggah(namaevent,alamat,deskripsi,userId);
                 }
             }
         });
     }
 
-    private void addUnggah(String userId, String namaevent, String alamat, String deskripsi) {
+    private void addUnggah(String namaevent, String alamat, String deskripsi, String userId) {
         binding.progressBar.setVisibility(View.VISIBLE);
         APIService api = Utilities.getRetrofit().create(APIService.class);
         Call<ValueNoData> call = api.addUnggah(namaevent, alamat, deskripsi, userId);
