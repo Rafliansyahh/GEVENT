@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateUnggahActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_namaevent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="180">
+
+            <EditText
+                android:id="@+id/et_namaevent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Event"
+                android:inputType="none"
+                android:maxLength="180"/>
+        </com.google.android.material.textfield.TextInputLayout
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="180"
+            android:layout_below="@id/til_namaevent">
+
+            <EditText
+                android:id="@+id/et_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alamat"
+                android:inputType="none"
+                android:maxLength="180"/>
+        </com.google.android.material.textfield.TextInputLayout
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="180"
+            android:layout_below="@id/til_alamat">
+
+            <EditText
+                android:id="@+id/et_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Deskripsi"
+                android:inputType="none"
+                android:maxLength="18"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/til_deskripsi"
+            android:layout_marginTop="16dp"/>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_update"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

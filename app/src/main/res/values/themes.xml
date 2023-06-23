@@ -5,5 +5,11 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="Base.Theme.Gevent.ActionBar" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
     <style name="Theme.Gevent" parent="Base.Theme.Gevent" />
+    <style name="Theme.Gevent.ActionBar" parent="Base.Theme.Gevent.ActionBar" />
 </resources>
