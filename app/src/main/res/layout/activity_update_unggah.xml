@@ -25,7 +25,7 @@
                 android:hint="Nama Event"
                 android:inputType="none"
                 android:maxLength="180"/>
-        </com.google.android.material.textfield.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_alamat"
@@ -42,7 +42,7 @@
                 android:hint="Alamat"
                 android:inputType="none"
                 android:maxLength="180"/>
-        </com.google.android.material.textfield.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_deskripsi"

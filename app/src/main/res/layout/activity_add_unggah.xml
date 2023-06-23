@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add_Tampil_Activity">
+    tools:context=".AddUnggahActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,48 +12,48 @@
         android:layout_margin="16dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_namabarang"
+            android:id="@+id/til_namaevent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:counterEnabled="true"
             app:counterMaxLength="180">
 
             <EditText
-                android:id="@+id/et_namabarang"
+                android:id="@+id/et_namaevent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nama Barang"
+                android:hint="Nama Event"
                 android:inputType="none"
                 android:maxLength="180"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_harga"
+            android:id="@+id/til_alamat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:counterEnabled="true"
             app:counterMaxLength="180"
-            android:layout_below="@id/til_namabarang">
+            android:layout_below="@id/til_namaevent">
 
             <EditText
-                android:id="@+id/et_harga"
+                android:id="@+id/et_alamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Harga"
-                android:inputType="numberDecimal"
-                android:maxLength="180" />
+                android:hint="Alamat"
+                android:inputType="none"
+                android:maxLength="180"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_desc"
+            android:id="@+id/til_deskripsi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:counterEnabled="true"
             app:counterMaxLength="180"
-            android:layout_below="@id/til_harga">
+            android:layout_below="@id/til_alamat">
 
             <EditText
-                android:id="@+id/et_desc"
+                android:id="@+id/et_deskripsi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Deskripsi"
@@ -67,8 +67,9 @@
             android:layout_height="wrap_content"
             android:text="Add"
             android:layout_alignParentEnd="true"
-            android:layout_below="@id/til_desc"
+            android:layout_below="@id/til_deskripsi"
             android:layout_marginTop="16dp"/>
+
         <ProgressBar
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
